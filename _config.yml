@@ -5,3 +5,8 @@ permalink: /blog/:year/:month/:day/:title
 
 gems:
   - jekyll-sitemap
+
+# Includes an icon in the footer for each user name you enter
+footer-links:
+  github: fp12
+  twitter: fp12gaming
