@@ -1,2 +1,4 @@
 name: fp12
 markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
