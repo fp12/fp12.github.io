@@ -37,3 +37,13 @@ ul.posts {
     margin: 20px auto 40px; 
     font-size: 1.5em;
 }
+
+pre.highlight,
+.highlight pre {
+  padding: 10px;
+}
+
+pre.highlight code,
+.highlight pre code {
+  white-space: pre-wrap;
+}
