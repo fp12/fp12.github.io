@@ -21,7 +21,7 @@ I searched for existing Python event systems and [many](http://www.valuedlessons
 
 In the end, you can have a very clean *Event* class, which is very close to the one I use in [yahtr](https://github.com/fp12/yahtr):
 
-~~~ python
+``` python
 class Event:
     def __init__(self, *args, **kwargs):
         self.handlers = set()
@@ -44,13 +44,13 @@ class Event:
     __iadd__ = handle
     __isub__ = unhandle
     __call__ = fire
-~~~
+```
 
 Note: I added **args* and ***kwargs* to the \_\_init\_\_ so I can expose the argument (at event declaration - no checks are ever done).
 
 Then you can use it like that:
 
-~~~python
+```python
 class MyEventSender:
     def __init__(self):
         # declare the event
@@ -70,7 +70,7 @@ class MyEventReceiver:
     def on_event_received(self, arg1, arg2)
         # receive the event here
         pass
-~~~
+```
 
 Let me know in the comments what you think about it and what you use!
 Thanks!
