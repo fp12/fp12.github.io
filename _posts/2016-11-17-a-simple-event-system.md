@@ -18,8 +18,7 @@ I searched for existing Python event systems and [many](http://www.valuedlessons
 * use the self *increment*/*decrement* operators to add/remove yourself to the event
 * use the *call* operator to fire the event
 
-
-In the end, you can have a very clean *Event* class, which is very close to the one I use in [yahtr](https://github.com/fp12/yahtr):
+So here is what you can find an other sites: a very clean *Event* class, which is very close to the one I use in [yahtr](https://github.com/fp12/yahtr).
 
 ``` python
 class Event:
@@ -46,7 +45,7 @@ class Event:
     __call__ = fire
 ```
 
-Note: I added **args* and ***kwargs* to the \_\_init\_\_ so I can expose the argument (at event declaration - no checks are ever done).
+Note: I added **args* and ***kwargs* to the \_\_init\_\_ so I can expose the argument(s) at event declaration. No checks are ever done though.
 
 Then you can use it like that:
 
