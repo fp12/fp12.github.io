@@ -8,7 +8,7 @@ date: 2016-11-17
 ## Context
 
 As I didn't want my game logic to know about the UI system, I needed a simple way to let the UI know when game things happen.
-
+<!--more-->
 
 ## Solution
 

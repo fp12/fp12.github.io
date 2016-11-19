@@ -12,6 +12,7 @@ Ingame consoles have several usages: game logging, debug, commands...
 In yahtr, I was at a point where I started to implement several debug options mapped to keyboard inputs, but it was quite cumbersome... So I decided to do something for the long run and build an ingame console!
 
 This post will be separated in 2 parts: how to feed the console and how to display it.
+<!--more-->
 
 ## How to feed the console
 
@@ -98,7 +99,7 @@ game_logger.addHandler(game_console_handler)
 As you may have noticed, I use the *Event* class from my previous post. Feel free to use another event-based system instead.
 
 
-# The Kivy case
+## The Kivy case
 
 Kivy uses the official Python logging module as well, and you may need to tweak the previous code depending on your needs. Indeed, if you don't want to use the kivy Logger, you'll need to get a child from the root logger because, for some reason, the [Kivy logger is set as the root](https://github.com/kivy/kivy/blob/master/kivy/logger.py).
 

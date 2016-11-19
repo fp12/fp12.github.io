@@ -15,3 +15,5 @@ gems:
 footer-links:
   github: fp12
   twitter: fp12gaming
+
+excerpt_separator: <!--more-->
