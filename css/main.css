@@ -48,7 +48,7 @@ pre.highlight code,
   white-space: pre-wrap;
 }
 
-p.excerpt {
+div.excerpt {
     font-size: 1em;
     width: 600px;
     border: 1px solid #000000;
