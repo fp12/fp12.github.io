@@ -51,9 +51,16 @@ pre.highlight code,
 div.excerpt {
     padding: 10px;
     white-space: nowrap; 
-    font-size: .8em;
+    font-size: .5em;
     width: 600px;
     border: 1px solid #000000;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-overflow: ellipsis;
+}
+
+div.project-banner {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.project-info {
+    padding: 10px;
 }
