@@ -12,3 +12,7 @@ comments: true
 <div class="notecomments">
   {% include disqus.html %}	 
 </div>
+
+<div>
+	Tags: {{ page.tags | array_to_sentence_string }}
+</div>
