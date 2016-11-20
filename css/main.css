@@ -69,5 +69,6 @@ div.project-info {
 }
 
 span.tag {
-    background-color: green;
+    background-color: #7400FF;
+    color: #FFBF0D;    
 }
