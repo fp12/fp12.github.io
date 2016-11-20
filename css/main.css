@@ -67,3 +67,7 @@ div.project-info {
     line-height: 0.8;
     padding: 10px;
 }
+
+span.tag {
+    background-color: green;
+}

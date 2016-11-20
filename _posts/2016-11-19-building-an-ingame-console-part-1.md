@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building an ingame console (part 1)"
-tags: yahtr, python, kivy
+tags: yahtr python kivy
 date: 2016-11-17
 ---
 

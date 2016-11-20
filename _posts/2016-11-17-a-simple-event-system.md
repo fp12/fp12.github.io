@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A simple event system"
-tags: yahtr, python
+tags: yahtr python
 date: 2016-11-17
 ---
 
