@@ -15,7 +15,8 @@ This post will be separated in 2 parts: how to feed the console and how to displ
 <!--more-->
 
 Here is an example of the console in a Quake game.
-[Quake Console](/images/quake-console.png)
+
+![Quake Console](/images/quake-console.png)
 
 ## How to feed the console
 
