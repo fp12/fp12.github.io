@@ -9,10 +9,13 @@ date: 2016-11-17
 
 Ingame consoles have several usages: game logging, debug, commands...
 
-In yahtr, I was at a point where I started to implement several debug options mapped to keyboard inputs, but it was quite cumbersome... So I decided to do something for the long run and build an ingame console!
+In yahtr, I was losing some time constantly switching from the game to the System Console so I decided to do something for the long run and build an ingame console! With it I will be able to see my logs directly ingame, and afterwards, execute commands in it.
 
 This post will be separated in 2 parts: how to feed the console and how to display it.
 <!--more-->
+
+Here is an example of the console in a Quake game.
+[Quake Console](/images/quake-console.png)
 
 ## How to feed the console
 
@@ -96,7 +99,8 @@ game_logger = app_logger.getChild('game')
 game_logger.addHandler(game_console_handler)
 ```
 
-As you may have noticed, I use the *Event* class from my previous post. Feel free to use another event-based system instead.
+As you may have noticed, I use the *Event* class from my [previous post]({{ site.baseurl }}{% post_url 2016-11-17-a-simple-event-system %})
+. Feel free to use another event-based system instead.
 
 
 ## The Kivy case
