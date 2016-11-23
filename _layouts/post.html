@@ -10,10 +10,11 @@ comments: true
 </div>
 
 <div>
-	Tags: 
+	<ul class="tags">
 	{% for tag in page.tags %}
-		<span class="tag">{{tag}}</span> &nbsp;
+		<li>{{tag}}</li>
 	{% endfor %}
+	</ul>
 </div>
 
 <!-- Post comments -->
