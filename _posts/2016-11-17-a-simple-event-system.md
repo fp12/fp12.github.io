@@ -71,5 +71,4 @@ class MyEventReceiver:
         pass
 ```
 
-Let me know in the comments what you think about it and what you use!
-Thanks!
+Fabien.

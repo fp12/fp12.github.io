@@ -136,3 +136,5 @@ game_logger.addHandler(game_console_handler)
 ```
 
 This concludes this first part!
+
+Fabien.
