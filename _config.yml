@@ -17,3 +17,4 @@ footer-links:
   twitter: fp12gaming
 
 excerpt_separator: <!--more-->
+theme: jekyll-theme-slate
