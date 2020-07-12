@@ -5,12 +5,10 @@ tags: yahtr python
 date: 2016-11-17
 ---
 
-## Context
-
 As I didn't want my game logic to know about the UI system, I needed a simple way to let the UI know when game things happen.
 <!--more-->
 
-## Solution
+### Solution
 
 I searched for existing Python event systems and [many](http://www.valuedlessons.com/2008/04/events-in-python.html) [sources](http://www.voidspace.org.uk/python/weblog/arch_d7_2007_02_03.shtml#e616) use the same principle: 
 
