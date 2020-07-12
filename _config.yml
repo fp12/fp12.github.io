@@ -5,7 +5,10 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
-  
+
+title: fp12's Tech blog
+description: c++ / Python / Unreal Engine / Unity...
+
 permalink: /blog/:year/:month/:day/:title
 
 gems:
@@ -14,7 +17,6 @@ gems:
 # Includes an icon in the footer for each user name you enter
 footer-links:
   github: fp12
-  twitter: fp12gaming
 
 excerpt_separator: <!--more-->
 theme: jekyll-theme-slate

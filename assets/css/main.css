@@ -1,8 +1,6 @@
-body {
-    font-family:'Roboto', sans-serif;
-    margin: 60px auto;
-    width: 70%;
-}
+---
+---
+@import "{{ site.theme }}";
 nav ul, footer ul {
     font-family:'Roboto', sans-serif;
     padding: 0px;
@@ -13,48 +11,12 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Roboto', sans-serif;
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-pre.highlight,
-.highlight pre {
-  padding: 10px;
-}
-
-pre.highlight code,
-.highlight pre code {
-  white-space: pre-wrap;
-}
 
 div.excerpt {
     padding: 10px;
-    white-space: nowrap; 
-    font-size: .5em;
+    font-size: 1em;
     width: 600px;
-    text-overflow: ellipsis;
+    text-overflow: fade;
 }
 
 div.project-banner {
@@ -73,8 +35,13 @@ div.project-title {
     border-width: 1px;
 }
 
+img.project-logo {
+    padding: 0;
+    margin: 0;
+}
+
 div.project-info {
-    font-size: .5em;
+    font-size: 1em;
     line-height: 0.8;
     padding: 10px;
 }

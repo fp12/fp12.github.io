@@ -1,16 +1,18 @@
 ---
 layout: default
-title: "fp12's coding adventures"
 ---
 <div class="blurb">
-    <h1>fp12's coding adventures...</h1>
+    <h1>Recent posts</h1>
     {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <span>{{ post.date | date_to_string }}</span>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             {% if post.excerpt %}
                 <div class="excerpt">
                     {{ post.excerpt }}
                 </div>
+                <a href="{{ post.url }}" title="{{ post.title }}">Read more...</a>
+                <hr />
             {% endif %}
-        </li>
+        <p />
     {% endfor %}
 </div><!-- /.blurb -->
