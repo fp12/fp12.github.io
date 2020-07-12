@@ -4,8 +4,7 @@ layout: default
 <div class="blurb">
     <h1>Recent posts</h1>
     {% for post in site.posts %}
-        <span>{{ post.date | date_to_string }}</span>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <small><em>{{ post.date | date_to_string }}</em></small>
             {% if post.excerpt %}
                 <div class="excerpt">
                     {{ post.excerpt }}
