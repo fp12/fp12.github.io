@@ -26,3 +26,10 @@ defaults:
       path: ""
     values:
       image: /images/meta/artificial-hive.png
+
+social:
+  name: Fabien Poupineau
+  links:
+    - https://www.linkedin.com/in/fpoupineau
+    - https://github.com/fp12
+    
