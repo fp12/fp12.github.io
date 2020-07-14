@@ -20,3 +20,9 @@ footer-links:
 
 excerpt_separator: <!--more-->
 theme: jekyll-theme-slate
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/meta/artificial-hive.png
