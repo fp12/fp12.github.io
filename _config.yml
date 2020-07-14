@@ -7,7 +7,7 @@ kramdown:
   syntax_highlighter: rouge
 
 title: fp12's Tech blog
-description: c++ / Python / Unreal Engine / Unity...
+description: C++ / Python / Unreal Engine / Unity...
 
 permalink: /blog/:year/:month/:day/:title
 
