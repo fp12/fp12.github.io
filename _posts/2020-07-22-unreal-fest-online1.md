@@ -3,7 +3,7 @@ layout: post
 title: "Unreal Fest Online | Part 1: Next-Gen & Abilities"
 tags: ue4 ue5 gas
 date: 2020-07-22
-image: /assets/images/UnrealFestOnlineBanner.jpg
+image: /assets/images/UnrealFestOnlineBanner-og.png
 ---
 ![Unreal Fest Online](/assets/images/UnrealFestOnlineBanner.jpg)  
 
