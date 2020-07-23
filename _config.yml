@@ -25,7 +25,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /images/meta/artificial-hive.png
+      image: /assets/images/meta/artificial-hive.png
 
 social:
   name: Fabien Poupineau
