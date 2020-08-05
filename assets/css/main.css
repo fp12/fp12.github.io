@@ -76,3 +76,5 @@ span.tag {
 .tags > li a {
     color: #fff;
 }
+
+img { max-width: 640px; }
