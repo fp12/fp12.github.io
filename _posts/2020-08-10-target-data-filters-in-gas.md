@@ -2,7 +2,7 @@
 layout: post
 title: "Target Data Filters in the Gameplay Ability System"
 tags: UE4 GAS C++
-date: 2020-07-30
+date: 2020-08-10
 image: /assets/images/gas-og.png
 ---
 ![alt_text](/assets/images/gas-og.png)
