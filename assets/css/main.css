@@ -78,3 +78,5 @@ span.tag {
 }
 
 img { max-width: 640px; }
+
+span.small { font-size: smaller; }

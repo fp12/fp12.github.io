@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Target Data Filters in the Gameplay Ability System"
-tags: ue4 gas c++
+tags: UE4 GAS C++
 date: 2020-07-30
 image: /assets/images/gas-og.png
 ---
@@ -10,20 +10,20 @@ image: /assets/images/gas-og.png
 
 _In this blog post, we'll explore a relatively hidden part of the Gameplay Ability System (GAS): the Target Data Filters._  
 _Basic knowledge of Gameplay Abilities in Blueprint is advised._  
-_Understanding of c++ in Unreal is required._
+_Understanding of C++ in Unreal is required._
 
 <!--more-->
 
 
 ## Targeting
 
-The Gameplay Ability System provides useful helpers for targeting.
+The **Gameplay Ability System** provides useful helpers for targeting.
 
 Usually, you would use the `Wait Target Data` _Gameplay Task_:  
 [![](/assets/images/targetdatafilters/image1.png)](/assets/images/targetdatafilters/image1.png){:target="_blank"}
 
 This task begins to be interesting once you select a Target Actor type, through the `Class` parameter. For instance, with the `GameplayAbilityTargetActor_Radius` we get these parameters:  
-[![](/assets/images/targetdatafilters/image3.png)](/assets/images/targetdatafilters/image2.png){:target="_blank"}
+[![](/assets/images/targetdatafilters/image2.png)](/assets/images/targetdatafilters/image2.png){:target="_blank"}
 
 You can find more information on these parameters on the [non-official documentation](https://github.com/tranek/GASDocumentation#4112-target-actors). However, the `Filter` parameter is deeper than it seems...
 
@@ -43,7 +43,7 @@ With this, we can filter out some actors and/or require a specific class to targ
 
 Now, what if we want to filter our targeting based on other criteria? That's where our C++ knowledge will come handy!
 
-First, we need to subclass `FGameplayTargetDataFilter` (and add it a placeholder member):
+First, we need to subclass `FGameplayTargetDataFilter` (and add it a placeholder member, `Name`):
 
 
 ```cpp
@@ -82,7 +82,7 @@ struct FCustomTargetDataFilter : public FGameplayTargetDataFilter
 	}
 };
 ```
-_If you're curious about the `(bReverseFilter ^ SpecificCondition)` expression, reach the footnote[^xor]!_
+<span class="small">_If you're curious about the (bReverseFilter ^ SpecificCondition) expression, reach the footnote [^xor]!_</span>
 
 Here we have the basics of a custom filter. However, we cannot use it in Blueprint _just yet_… Indeed, the Target Actor (through the `WaitTargetData` node) requires to be passed an `FGameplayTargetDataFilterHandle`, hence the `Make Filter Handle` node we've seen previously. But unfortunately, this node only accepts `FGameplayTargetDataFilter`s so it can't deal with the new `FCustomTargetDataFilter`...
 
@@ -105,7 +105,7 @@ static FGameplayTargetDataFilterHandle MakeCustomFilterHandle(FCustomTargetDataF
 
 
 Now we can use the Custom Filter in an Ability Blueprint!
-[![](/assets/images/targetdatafilters/image6.png)](/assets/images/targetdatafilters/image4.png){:target="_blank"}
+[![](/assets/images/targetdatafilters/image4.png)](/assets/images/targetdatafilters/image4.png){:target="_blank"}
 
 
 And you can see the placeholder parameter `Name` in the construction.  \
