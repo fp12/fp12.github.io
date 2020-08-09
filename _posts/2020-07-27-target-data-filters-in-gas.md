@@ -17,7 +17,7 @@ _Understanding of c++ in Unreal is required._
 
 ## Targeting
 
-The Gameplay Ability System provides useful helpers for targetting.
+The Gameplay Ability System provides useful helpers for targeting.
 
 Usually, you would use the `Wait Target Data` _Gameplay Task_:  
 [![](/assets/images/targetdatafilters/image1.png)](/assets/images/targetdatafilters/image1.png){:target="_blank"}
@@ -127,6 +127,7 @@ static FGameplayTargetDataFilterHandle MakeCustomFilterHandle_Simple(const UGame
 	Filter.bReverseFilter = false;
 
 	FGameplayTargetDataFilter* NewFilter = new FCustomTargetDataFilter(Filter);
+	// set the avatar from the ability
 	NewFilter->InitializeFilterContext(Ability->GetAvatarActorFromActorInfo());
 
 	FGameplayTargetDataFilterHandle FilterHandle;
@@ -140,7 +141,13 @@ Now we can use it like this in our Ability Blueprint:
 [![](/assets/images/targetdatafilters/image5.png)](/assets/images/targetdatafilters/image5.png){:target="_blank"}
 
 
-If we have a custom UGameplayAbility child class, we can go even further. We simply add the function right into the child class (and change the access to the Avatar actor) that will be accessible like that:
+If we wanted to go slightly further, we could add the meta specifier `DefaultToSelf`:  
+```cpp
+UFUNCTION(BlueprintPure, Category = "Filter", meta = (DefaultToSelf = "Ability", HidePin = "Ability"))
+static FGameplayTargetDataFilterHandle MakeCustomFilterHandle_Simple(const UGameplayAbility* Ability, const FString& Name);
+```
+
+It would remove the need to specify the Ability (by forcing it to use the self context of the node):
 [![](/assets/images/targetdatafilters/image6.png)](/assets/images/targetdatafilters/image6.png){:target="_blank"}
 
 
